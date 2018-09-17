@@ -35,16 +35,16 @@ reader.on_finish.add(adder.bake)
         
 reader.read()
         
-## Resetting object/mesh/scene in Blender to deal with persistent issues
-bpy.ops.object.select_all(action='SELECT')  #seems necessary to make edits to a mesh
+## Resetting object/mesh/scene in Blender to deal with initalization issues
+bpy.ops.object.select_all(action='SELECT')  #Necessary to make edits to a mesh
 scene.objects.active = bpy.data.objects['BathymetryObject']  #In order to select the object in the scene
-scene = bpy.context.scene   #Somehow this is necessary too
+scene = bpy.context.scene   
 bpy.ops.object.mode_set(mode='EDIT')
 ob = bpy.context.object  
 me = ob.data
 bm = bmesh.from_edit_mesh(me)
 
-if hasattr(bm.verts, "ensure_lookup_table"):   #Fix for old code: now Blender uses loops to access vertices
+if hasattr(bm.verts, "ensure_lookup_table"):   #Fix for older code: now Blender uses loops to access vertices
     bm.verts.ensure_lookup_table()
 
 ## Initalize variables    
