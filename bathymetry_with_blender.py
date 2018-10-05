@@ -36,9 +36,9 @@ reader.on_finish.add(adder.bake)
 reader.read()
         
 ## Resetting object/mesh/scene in Blender to deal with initalization issues
-bpy.ops.object.select_all(action='SELECT')  #Necessary to make edits to a mesh
+#bpy.ops.object.select_all(action='SELECT')  #Necessary to make edits to a mesh
 scene.objects.active = bpy.data.objects['BathymetryObject']  #In order to select the object in the scene
-scene = bpy.context.scene   
+#scene = bpy.context.scene   
 bpy.ops.object.mode_set(mode='EDIT')
 ob = bpy.context.object  
 me = ob.data
