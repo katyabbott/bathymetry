@@ -6,7 +6,7 @@ import time
 start_time = time.time()
 
 ## User input ##
-filename = r"/Users/katyabbott/Documents/Helen Fellowship/Bathymetry/FL_Bathymetry/FL_Bathymetry_ERDDAP.csv"  #enter a valid file name here
+filename = r"/...usgsCeCrm3_7639_0590_c1ee.csv"  #enter a valid file name here
 
 ## Delete anything already open
 bpy.ops.object.select_all(action='SELECT')
