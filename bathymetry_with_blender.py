@@ -90,4 +90,4 @@ for i in range(lat_len - 1):
 print("Elapsed time: {}".format(time.time() - start_time))
 
 ### Note: To view in Blender
-# Select the mesh object. In the Transform window, change the scale to be x = 7, y = -7, z = .005. Then in the view dropdown, select "view selected"
+# Select the mesh object. In the Transform window, change the scale to be x = 7, y = -7, z = .005 (or a similar scale to reflect magnitude of z values vs. x and y). Then in the view dropdown, select "view selected"
