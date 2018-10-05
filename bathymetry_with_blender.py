@@ -88,3 +88,6 @@ for i in range(lat_len - 1):
 			bm.faces.new((prev_lat[i], prev_lat[i+1], next_lat[i + 1], next_lat[i]))
 
 print("Elapsed time: {}".format(time.time() - start_time))
+
+### Note: To view in Blender
+# Select the mesh object. In the Transform window, change the scale to be x = 7, y = -7, z = .005. Then in the view dropdown, select "view selected"
