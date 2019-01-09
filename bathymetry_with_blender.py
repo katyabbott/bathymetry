@@ -6,7 +6,7 @@ import time
 start_time = time.time()
 
 ## User input ##
-filename = r"/Users/katyabbott/Documents/Helen Fellowship/Bathymetry/FL_Bathymetry/FL_Bathymetry_ERDDAP.csv"  #enter a valid file name here
+filename = r"/...usgsCeCrm3_7639_0590_c1ee.csv"  #enter a valid file name here
 
 ## Delete anything already open
 bpy.ops.object.select_all(action='SELECT')
@@ -36,9 +36,9 @@ reader.on_finish.add(adder.bake)
 reader.read()
         
 ## Resetting object/mesh/scene in Blender to deal with initalization issues
-bpy.ops.object.select_all(action='SELECT')  #Necessary to make edits to a mesh
+#bpy.ops.object.select_all(action='SELECT')  #Necessary to make edits to a mesh
 scene.objects.active = bpy.data.objects['BathymetryObject']  #In order to select the object in the scene
-scene = bpy.context.scene   
+#scene = bpy.context.scene   
 bpy.ops.object.mode_set(mode='EDIT')
 ob = bpy.context.object  
 me = ob.data
@@ -88,3 +88,6 @@ for i in range(lat_len - 1):
 			bm.faces.new((prev_lat[i], prev_lat[i+1], next_lat[i + 1], next_lat[i]))
 
 print("Elapsed time: {}".format(time.time() - start_time))
+
+### Note: To view in Blender
+# Select the mesh object. In the Transform window, change the scale to be x = 7, y = -7, z = .005 (or a similar scale to reflect magnitude of z values vs. x and y). Then in the view dropdown, select "view selected"
